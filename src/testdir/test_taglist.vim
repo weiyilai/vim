@@ -301,4 +301,19 @@ func Test_tag_complete_with_overlong_line()
   set tags&
 endfunc
 
+" This used to crash Vim
+func Test_evil_emacs_tagfile()
+  CheckFeature emacs_tags
+  let longline = repeat('a', 515)
+  call writefile([
+	\ "\x0c",
+	\ longline
+	\ ], 'Xtags', 'D')
+  set tags=Xtags
+
+  call assert_fails(':tag a', 'E426:')
+
+  set tags&
+endfunc
+
 " vim: shiftwidth=2 sts=2 expandtab

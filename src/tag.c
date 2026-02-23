@@ -1901,6 +1901,9 @@ emacs_tags_new_filename(findtags_state_T *st)
 
     for (p = st->ebuf; *p && *p != ','; p++)
 	;
+    // invalid
+    if (*p == NUL)
+	return;
     *p = NUL;
 
     // check for an included tags file.
