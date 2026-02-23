@@ -2022,6 +2022,9 @@ etag_fail:
     }
     else			    // second format: isolate tagname
     {
+	if (p_7f == lbuf)
+	    goto etag_fail;
+
 	// find end of tagname
 	for (p = p_7f - 1; !vim_iswordc(*p); --p)
 	    if (p == lbuf)
