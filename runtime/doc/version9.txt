@@ -52601,6 +52601,11 @@ Changed~
 							*added-9.3*
 Added ~
 -----
+Various syntax, indent and other plugins were added.
+
+Autocommands: ~
+
+|SessionLoadPre|	before loading a |Session| file
 
 ==============================================================================
 PATCHES						*patches-9.3* *bug-fixes-9.3*
