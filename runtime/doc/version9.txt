@@ -52594,6 +52594,7 @@ Other ~
 - |ConPTY| support is considered stable as of Windows 11.
 - Support for "dap" channel mode for the |debug-adapter-protocol|.
 - |status-line| can use several lines, see 'statuslineopt'.
+- New "leadtab" value for the 'listchars' setting.
 
 							*changed-9.3*
 Changed~
